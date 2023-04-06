@@ -7,17 +7,18 @@ describe('Test Task', ()=> {
   
     // Open home page
     await browser.url('https://www.sbzend.ssls.com')
-    
+    await $("//span[@class='ssls-toolbar__btn-text']").waitForDisplayed()
     expect(await browser.getTitle()).toEqual('Cheap SSL Certificates—Buy SSL Certs $3.75 | 30-day trial');
 
     // Click on "LOG IN" text
-    const loginLink = await browser.$("//span[@class='ssls-toolbar__btn-text']")
+    const loginLink = await $("//span[@class='ssls-toolbar__btn-text']");
     await loginLink.click();
+    await $("//input[@placeholder='Email']").waitForDisplayed()
 
     // Enter valid email and password on authorization page
-    const emailField = await browser.$("//input[@placeholder='Email']");
+    const emailField = await $("//input[@placeholder='Email']");
     await emailField.setValue('ssls.automation+666@gmail.com');
-    const passwordField = await browser.$("//input[@placeholder='Enter password']");
+    const passwordField = await $("//input[@placeholder='Enter password']");
     await passwordField.setValue('123456');
 
     // Click the "Login" button
