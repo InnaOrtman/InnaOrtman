@@ -1,0 +1,50 @@
+{
+    "status": "ok",
+    "at": "2023-03-02T12:16:08.000000Z",
+    "transaction_id": "453e9252-4375-42ac-a73b-8b69390681c0",
+    "order_ref": "cc297a74dd8a",
+    "total_requested": {
+        "amount": 3.16,
+        "currency": "EUR"
+    },
+    "total_settled_amount": {
+        "amount": "3.16",
+        "currency": "EUR"
+    },
+    "score": {
+        "categories": [
+            {
+                "key": "history",
+                "adj": 625,
+                "rules": [
+                    {
+                        "rule": "to_many_pans",
+                        "adj": -100
+                    },
+                    {
+                        "rule": "pan_successful_transaction",
+                        "adj": 1000
+                    },
+                    {
+                        "rule": "pan_multiple_users",
+                        "adj": -25
+                    },
+                    {
+                        "rule": "last_deposit_status",
+                        "adj": 50
+                    }
+                ]
+            },
+            {
+                "key": "card",
+                "adj": 1100,
+                "rules": [
+                    {
+                        "rule": "incharge_bin",
+                        "adj": 1100
+                    }
+                ]
+            }
+        ]
+    }
+}

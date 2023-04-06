@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//option[@value='0']"
+}

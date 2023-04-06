@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//select[@id='is_kyc']"
+}
