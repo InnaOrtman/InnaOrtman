@@ -3,28 +3,29 @@
 
 describe('Test Task', ()=> {
   
-  it('should Add Founds', async()=> {
+  it('should Login', async()=> {
   
     // Open home page
-    await browser.url('https://www.sbzend.ssls.com');
-    expect(await browser.getTitle()).toEqual('SSL Certificates & Security Solutions | SSLs.com');
+    await browser.url('https://www.sbzend.ssls.com')
+    await browser.pause(5000)
+    expect(await browser.getTitle()).toEqual('Cheap SSL Certificates—Buy SSL Certs $3.75 | 30-day trial');
 
     // Click on "LOG IN" text
-    const loginLink = await browser.$('//a[text()="LOG IN"]');
+    const loginLink = await browser.$("//span[@class='ssls-toolbar__btn-text']")
     await loginLink.click();
 
     // Enter valid email and password on authorization page
-    const emailField = await browser.$('#email');
+    const emailField = await browser.$("//input[@placeholder='Email']");
     await emailField.setValue('ssls.automation+666@gmail.com');
-    const passwordField = await browser.$('#password');
+    const passwordField = await browser.$("//input[@placeholder='Enter password']");
     await passwordField.setValue('123456');
 
     // Click the "Login" button
-    const loginButton = await browser.$('//button[@type="submit"]');
+    const loginButton = await browser.$("//button[normalize-space()='Login']");
     await loginButton.click();
 
     // Check that home page is opened
-    expect(await browser.getTitle()).to.equal('SSL Certificates & Security Solutions | SSLs.com');
+    expect(await browser.getTitle()).toEqual('Cheap SSL Certificates—Buy SSL Certs $3.75 | 30-day trial');
 
     // Open profile page
     const profileButton = await browser.$('//button[contains(@class, "ProfileToggle")]');
