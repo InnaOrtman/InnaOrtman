@@ -26,7 +26,7 @@ describe('Test Task', ()=> {
     await loginButton.click();
     await browser.pause(5000)
     // Check that home page is opened
-    expect(await browser.getTitle()).toEqual('Cheap SSL Certificates—Buy SSL Certs $3.75 | 30-day trial');
+    expect(await browser.getTitle()).toEqual('My SSL');
 
     // Open profile page
     const profileButton = await browser.$('//button[contains(@class, "ProfileToggle")]');
