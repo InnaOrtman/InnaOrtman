@@ -1,5 +1,5 @@
 
-const { expect } = require('chai');
+
 
 describe('Test Task', ()=> {
   
@@ -7,7 +7,7 @@ describe('Test Task', ()=> {
   
     // Open home page
     await browser.url('https://www.sbzend.ssls.com');
-    expect(await browser.getTitle()).to.equal('SSL Certificates & Security Solutions | SSLs.com');
+    expect(await browser.getTitle()).toEqual('SSL Certificates & Security Solutions | SSLs.com');
 
     // Click on "LOG IN" text
     const loginLink = await browser.$('//a[text()="LOG IN"]');
