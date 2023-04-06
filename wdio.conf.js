@@ -1,5 +1,3 @@
-
-
 export const config = {
     //
     // ====================
@@ -25,8 +23,7 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        
-        './test/specs/**/CloseLoop_Test copy.js'
+        './test/specs/**/login.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -143,6 +140,7 @@ export const config = {
         outputDir: 'allure-results',
         disableWebdriverScreenshotsReporting: true,
     }]],
+
 
     
     //
