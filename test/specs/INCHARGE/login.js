@@ -7,7 +7,7 @@ describe('Test Task', ()=> {
   
     // Open home page
     await browser.url('https://www.sbzend.ssls.com')
-    await browser.pause(5000)
+    
     expect(await browser.getTitle()).toEqual('Cheap SSL Certificates—Buy SSL Certs $3.75 | 30-day trial');
 
     // Click on "LOG IN" text
@@ -23,7 +23,7 @@ describe('Test Task', ()=> {
     // Click the "Login" button
     const loginButton = await browser.$("//button[normalize-space()='Login']");
     await loginButton.click();
-
+    await browser.pause(5000)
     // Check that home page is opened
     expect(await browser.getTitle()).toEqual('Cheap SSL Certificates—Buy SSL Certs $3.75 | 30-day trial');
 
