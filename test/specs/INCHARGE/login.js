@@ -7,7 +7,7 @@ describe('Test Task', ()=> {
   
     // Open home page
     await browser.url('https://www.sbzend.ssls.com')
-    await $("//span[@class='ssls-toolbar__btn-text']").waitForDisplayed()
+    await $("//label[normalize-space()='Ecommerce']").waitForDisplayed()
     expect(await browser.getTitle()).toEqual('Cheap SSL Certificates—Buy SSL Certs $3.75 | 30-day trial');
 
     // Click on "LOG IN" text
