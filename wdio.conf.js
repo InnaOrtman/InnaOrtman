@@ -23,7 +23,7 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/login.js'
+        './test/specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -135,8 +135,7 @@ export const config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     
-    reporters: ['spec'],
-    reporters: [['allure', {
+    reporters:  ['spec', ['allure', {
         outputDir: 'allure-results',
         disableWebdriverScreenshotsReporting: true,
     }]],
