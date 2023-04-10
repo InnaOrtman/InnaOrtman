@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//h5[normalize-space()='Personal Information']"
-}

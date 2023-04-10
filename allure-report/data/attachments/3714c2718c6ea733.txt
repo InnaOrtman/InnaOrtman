@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//button[@class='btn btn-block btn_style_outline']"
-}
