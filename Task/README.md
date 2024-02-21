@@ -1,8 +1,3 @@
----
-runme:
-  id: 01HQ6HA2A208AR0T5QG20X7J30
-  version: v3
----
 
 Setup Instructions:
 1. Clone the Repository
