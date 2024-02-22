@@ -97,6 +97,6 @@ describe('Redvike QA Automation - Test Cases', () => {
 
       await $("//*[normalize-space()='Successful Form Submissions']").waitForDisplayed();
       expect (await container.getText()).toEqual(`Name:\n${name} ${lastname}\nEmail:\n${email}\nAvatar:`);
-
+      expect (await $(`//img[@alt='Avatar']`)).toBeDisplayed()
     });
   });
