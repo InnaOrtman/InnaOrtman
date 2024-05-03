@@ -44,12 +44,11 @@ async function fetchGuidance(outline) {
     outline: ${outline}
     guidance: 
     `,
-    max_tokens: 700
+    max_tokens: 200
   })
   const guidance = response.data.choices[0].text.trim()
   document.getElementById('output-text').innerText = guidance
   fetchTitle(guidance)
-  //fetchStars(guidance)
 }
 
 async function fetchTitle(guidance) {
@@ -64,26 +63,10 @@ async function fetchTitle(guidance) {
   fetchImagePrompt(title, guidance)
 }
 
-/*async function fetchStars(guidance){
-  const response = await openai.createCompletion({
-    model: 'gpt-3.5-turbo-instruct',
-    prompt: `Extract the names in brackets from the guidance.
-    ###
-    guidance: In times of peril, remember the words of Proverbs 3:5-6: "Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight." As Maverick (Tom Cruise) embarks on his dangerous mission, he must rely on faith and wisdom to navigate through the challenges ahead.
-    names: Tom Cruise
-    ###
-    guidance: ${guidance}
-    names:   
-    `,
-    max_tokens: 30
-  })
-  document.getElementById('output-stars').innerText = response.data.choices[0].text.trim()
-}*/
-
 async function fetchImagePrompt(title, guidance){
   const response = await openai.createCompletion({
     model: 'gpt-3.5-turbo-instruct',
-    prompt: `Generate an inspiring image for the application of biblical advice use a picturesque image of angels of flowers and beautiful landscapes.
+    prompt: `Generate an inspiring image for the application of biblical advice use a picturesque image of angels of flowers and beautiful landscapes. There should be no text in this image.
     ###
     title: ${title}
     guidance: ${guidance}
