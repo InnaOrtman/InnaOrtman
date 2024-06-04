@@ -8,8 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^10.12.2",
     "openai": "3.2.1",
     "vite": "latest"
-  },
-  "devDependencies": {}
+  }
 }
